@@ -1,0 +1,78 @@
+<h2>i am younger child</h2>
+<!-- <button type="submit" routerLink="header">Header</button> -->
+
+
+<!-- ng for directive -->
+<div class="container">
+ <div class="row">
+<div class="column-md-8">
+<table class="table">
+    <thead class="thead-dark">
+        <tr> 
+            <td>S.No</td>
+            <td>houselocation</td>
+            <td>Name</td>
+            <td>Prize</td>
+            <td>Agentcommission</td>
+            <td>Investors</td>
+        </tr>
+    </thead>
+       <tbody>
+        <tr *ngFor="let myhouse of houses; index as i"> 
+            <td>{{i}}</td>
+            <td>{{myhouse.Name}}</td>
+            <td>{{myhouse.houselocation}}</td>
+            <td>{{myhouse.Name}}</td>
+            <td>{{myhouse.Prize}}</td>
+            <td>{{myhouse.Agentcommission}}</td>
+            <td>{{myhouse.Investors}}</td>
+      </tr>
+    </tbody>
+
+</table>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+           <input #username  type="text" class="form-control" placeholder="Create User">
+        </div>
+        <div class="col-md-5">
+        <button class="btn-btn-success" (click)=OncreateUser(username)>Create User</button>
+         </div>
+         <div class="col-md-5">
+                <button class="btn-btn-success" (click)=Onremove(username)>Remove User</button>
+                 </div> 
+    </div>
+</div>
+<br>
+
+        <div class="row">
+       <div class="column-md-8">
+       <table class="table">
+           <thead class="thead-dark">
+               <tr> 
+                   <td>S.No</td>
+                   <td>Name</td>
+                
+               </tr>
+           </thead>
+              <tbody>
+               <tr *ngFor="let user of users index as i"> 
+                   <td>{{i}}</td>
+                   <td>{{user.name}}</td>
+                   <td><button class="btn-btn-success" (click)=RemoveItemBYindex(i)>Remove Value</button></td>
+                 
+             </tr>
+           </tbody>
+       
+       </table>
+       </div>
+       </div>
+       

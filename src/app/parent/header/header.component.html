@@ -1,0 +1,50 @@
+
+<h1>I am big child</h1>
+ <!-- <button type="submit"routerLink="footer">Footer</button><br>  -->
+
+<input  type="text">
+<button type="submit" (click)="addHousebuyer()">Event binding</button>
+<p>{{message}}</p>
+
+<!-- input events binding -->
+<input  type="text" value="eventsdata" (mouseup)="InputEvent($event)">
+<p>{{message2}}</p>
+
+<!-- local varibale reference-->
+<input  #inputInfo type="text" value="name" name="Neetu dagar">
+<button type ="submit" (click)="Myinfo(inputInfo)">Template Reference</button>
+
+<!-- ng if else property -->
+<div class="container"><br><br>
+<button class="btn-btn-success" (click)="MyngIf()">Create block</button>
+<div *ngIf="Isvalid; then thenBlock else myref"></div>
+    <ng-template #thenBlock>
+    <h1>Structure directives are ngIf ngFor,ngSwitch
+    </h1>
+    </ng-template>  
+    <ng-template #myref>
+    <h1>And Components Are Component directives</h1>
+    </ng-template>
+    </div> 
+
+
+<!-- ng Switch Directive Use for multiple conditions  -->
+    <div class="container">
+    <div class="col-md-10">
+     <select class="form-control" (change)="SwitchDirective($event)">
+        <option value="default">Select Value</option>
+        <option value="Name">Name</option>
+        <option value="Gender">Gender</option>
+        <option value="Graduation">Graduation</option>
+        <option value="Company">Company</option>
+    </select>
+    </div>
+    <!-- content of every OPTIONS -->
+    <div class="col-md-12" [ngSwitch]="selectedValue">
+    <h4 class="text-success" *ngSwitchDefault>Please select a value</h4>
+    <h4 class="text-success" *ngSwitchCase="'Name'">User name is Housebuyer</h4>
+    <h4 class="text-success" *ngSwitchCase="'Gender '">Gender can be anything male or female</h4>
+    <h4 class="text-success" *ngSwitchCase="'Graduation'">Gradution is completed B.tech</h4>
+    <h4 class="text-success" *ngSwitchCase="'Company'">Company is flexin in noida</h4>
+    </div>
+    </div>
