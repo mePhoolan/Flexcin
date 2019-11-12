@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ParentModule} from './parent/parent.module'
@@ -11,7 +11,11 @@ import  {UserService} from './services/user.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { ComponentcommunicationComponent } from './componentcommunication/componentcommunication.component';
-import { ChildcommunicationComponent } from './componentcommunication/childcommunication/childcommunication.component';
+import { ChildcommunicationComponent } from './childcommunication/childcommunication.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 // import { HeaderComponent } from './parent/header/header.component';
 //  import { FooterComponent } from './parent/footer/footer.component';
 
@@ -26,13 +30,18 @@ import { ChildcommunicationComponent } from './componentcommunication/childcommu
     NgContentComponent,
     ComponentcommunicationComponent,
     ChildcommunicationComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
     // HeaderComponent,
     // FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ParentModule
+    ParentModule,
+    HttpClientModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

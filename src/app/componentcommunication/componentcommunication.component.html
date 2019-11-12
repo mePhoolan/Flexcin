@@ -1,10 +1,16 @@
 <div class="page-area">
     <div class="text-centre">
     <h2>Communication Between Components</h2>
-    <p>This is a comunication page between Parent and Child </p>
+    <!-- <p>This is a comunication page between Parent and Child </p> -->
     </div>
 
 
+    <div class="alert alert-light border d-flex align-items-center" *ngIf="AddedtoCart">
+      <strong  class="text-success">{{AddedtoCart}}</strong>&nbsp;is selected and Added to cart
+      <button class="btn btn-success ml-auto">CheckOut</button>
+    </div>
+    
+  
 
 
 
@@ -16,7 +22,7 @@
             <img src="../../assets/images/leptop.jpeg" width="230" height="150">
                  <div class="card-body">
                   <h3 class="card-title">  <main>Laptop</main></h3>
-                        <button class="btn btn-success">Select this product</button>   
+                        <button class="btn btn-success" (click)="OnproductSelected('Laptop')">Select this product</button>   
                  </div>
                  </div>
             
@@ -30,7 +36,7 @@
         <img src="../../assets/images/mobile.jpeg" width="230" height="150">
              <div class="card-body">
               <h3 class="card-title">  <main>Mobile</main></h3>
-            <button class="btn btn-success">Select this product</button>  
+            <button class="btn btn-success" (click)="OnproductSelected('Mobile')">Select this product</button>  
              </div>
              </div>
 
@@ -39,7 +45,7 @@
            <img src="../../assets/images/watch.jpeg" width="230" height="150">
              <div class="card-body">
               <h3 class="card-title">Watch</h3>
-              <button class="btn btn-success">Select this product</button>  
+              <button class="btn btn-success" (click)="OnproductSelected('Watch')">Select this product</button>  
              </div>
            </div>
 
@@ -47,14 +53,16 @@
            <img src="../../assets/images/washing.jpeg" width="230" height="150">
              <div class="card-body">
               <h3 class="card-title">Washing Machine</h3>
-               <button class="btn btn-success">Select this product</button>  
+               <button class="btn btn-success" (click)="OnproductSelected('Washing Machine')">Select this product</button>  
              </div>
              </div>
             </div>
-            <div class="col-md-12 bg-success text-white text-center py-4">
-              <h2 *ngIf="!ProductSelected">Please Select a Product</h2>
-              <h2 *ngIf="ProductSelected">Laptop is selected</h2>
-              <button class="btn">Add to cart</button>
-            </div>
+
+            <!-- Insert the selector of child component child component property bindign by custom property in parent component-->
+            <!-- <app-childcommunication [placeHolderText]="myname"></app-childcommunication> -->
+            <app-childcommunication class="w-100" [productSelected]="proSelected" 
+            [selectedProduct]=" sellProduct" (AddedtoCart)="OnAddtoCart($event)">
+          </app-childcommunication>
+            
         </div>
   </div>

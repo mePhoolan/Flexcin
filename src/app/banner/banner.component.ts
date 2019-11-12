@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import  {UserService} from '../services/user.service';
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _msgService:UserService) { }
 
   ngOnInit() {
-  }
+    // subscribe the users method
+ 
+   }
+      
+  
 
+  myMessage(msg){
+  this._msgService.MessageAlert(msg)
+}
 }

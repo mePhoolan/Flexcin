@@ -3,12 +3,63 @@
     <h1>
         Users
     </h1>
-    <p>Users Name List Here</p>
-<div class="user-area">
+    <!-- view child can manipulate any dom prperty -->
+    <div #box>
+    <p>Username is <span class="text-success" ></span>{{username}}</p>
+    </div>
+
+<!-- component 1-->
+ 
+    
+<!-- <div class="user-area">
     <ng-container *ngIf="statusOnline">
     <div *ngFor="let user of users">
-    <p>{{user.name}}</p>
+    <p>
+        <strong class="text-success">{{user.id}} &nbsp;</strong>
+        <strong class="text-success">{{user.name}}</strong>
+   </p>
+     <p>{{user.name}}</p> -->
+<!--     
 </div>
-    </ng-container>
-</div>
+</ng-container>
+</div> --> 
+
+<!-- component 1 viewchild access-->
+ <div class="row">
+    <div class="col-md-6">
+        <button class="btn btn-danger" (click)="changeChildProperty()">Call Comp1 property</button>
+        &nbsp;
+        
+        <button class="btn btn-danger" (click)="changeChildMethod()">Call Comp1 Method</button>
+    <app-comp1></app-comp1>
+    </div>
+ </div>
+
+
+<!-- 
+component 2-->
+<!-- <div class="row">
+        <div class="col-md-6">
+        <app-comp2></app-comp2>
+        </div>
+     </div> -->
+
+
+
+<!-- component 3-->
+ <!-- <div class="row">
+        <div class="col-md-6">
+        <app-comp3></app-comp3>
+        </div>
+     </div> -->
+
+
+<!-- component 4 -->
+ <!-- <div class="row">
+        <div class="col-md-6">
+        <app-comp4></app-comp4>
+        </div>
+     </div> --> 
+
+
 </div>
