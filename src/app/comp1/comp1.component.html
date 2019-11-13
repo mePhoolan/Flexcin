@@ -1,11 +1,15 @@
-<div class="box">
+<div class="box" appTestDirective>
     
     <!-- User Name:<strong>{{userName}}</strong> -->
     <p>component 1 data</p>
     <h5>product Name: {{product}}</h5>
     <br><br>
     <input #uname type="text" placeholder="update Name">
-    <button class="btn btn-success" (click)="OnupdateUser(uname)">Update</button>
+    <button class="btn btn-success" (click)="OnupdateUser(uname)">Update</button>&nbsp;
     <br>
-    <button class="btn btn-success" (click)="viewchildAlert()">Alert product Name</button>
+ 
+   <button (click)="viewchildAlert()" color="black">Alert product Name</button>&nbsp;
+   <button class="btn btn-danger" (click)="changeColor('red')">Red</button>&nbsp;
+   <button class="btn btn-success" (click)="changeColor('green')">Green</button>
+  <ng-content></ng-content>
 </div>
