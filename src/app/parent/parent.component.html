@@ -5,4 +5,43 @@
 <br>
 <button class="btn btn-success"routerLink="footer">Footer</button>
 </header>
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 form-inline mb-2">
+      <input type="text" class="form-control" #product>
+      <button class="btn btn-success ml-2" (click)=OnproductAdd(product)>Addd Product</button> 
+    </div>
+    <div class="col-md-8">
+            <div class="form-group">
+                    <label for="search">Search Product</label>
+                    <input type="text" class="form-control"
+                    
+                    [(ngModel)]="nameSearch" />
+    </div>
+   </div>
+  
+    <div class="col-md-8">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">S.NO</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th>Availablity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of productArray | filter:nameSearch">
+                <th scope="row">{{product.sno}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><h5><span class="badge">{{product.availability}}</span></h5></td>
+              </tr>
+       
+            </tbody>
+          </table>  
+    </div>
+</div>
+
 <router-outlet></router-outlet>

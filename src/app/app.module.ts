@@ -1,6 +1,7 @@
 import * as $ from 'jquery';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ShareModule } from './share.module';
 import {HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,13 +20,17 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { TestDirectiveDirective } from './appDirectives/test-directive.directive';
 import { UxPipe } from './appPipes/ux.pipe';
+// import { FilterPipe } from './appPipes/filter.pipe';
+import { TemplateformComponent } from './templateform/templateform.component';
 
 // import { HeaderComponent } from './parent/header/header.component';
 //  import { FooterComponent } from './parent/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, // return value.filter(function(search){
+      //   return search.name.indexOf(searchTerm)> -1
+      // })
   
     UserComponent,
     AdminComponent,
@@ -40,14 +45,19 @@ import { UxPipe } from './appPipes/ux.pipe';
     Comp4Component,
     TestDirectiveDirective,
     UxPipe,
+    TemplateformComponent,
+    // FilterPipe,
     // HeaderComponent,
     // FooterComponent
   ],
+ 
   imports: [
     BrowserModule,
     AppRoutingModule,
     ParentModule,
-    HttpClientModule
+    HttpClientModule,
+    ShareModule
+    
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

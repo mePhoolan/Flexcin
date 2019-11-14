@@ -18,6 +18,7 @@ export class UserComponent implements OnInit,AfterViewInit{
   name="Parvinder"
   myname;
     
+  
   // viewchild for same component
   @ViewChild('box',{static:true}) box: ElementRef;
    // access the property ofchild component by viewchild method

@@ -6,14 +6,15 @@ import { AdminComponent } from './admin/admin.component';
 import { BannerComponent } from './banner/banner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComponentcommunicationComponent } from './componentcommunication/componentcommunication.component';
-
+import { TemplateformComponent } from './templateform/templateform.component';
 const routes: Routes = [
 {
   path:'' ,redirectTo:"banner",pathMatch:"full"
 },
  
  {
- path:'',loadChildren:'./parent/parent.module#ParentModule'
+ path:'',
+ loadChildren:'./parent/parent.module#ParentModule'
 },
 
   {
@@ -32,7 +33,9 @@ const routes: Routes = [
     path:'componentcommunication',component:ComponentcommunicationComponent 
   },
 
-
+  {
+    path:'contact',component:TemplateformComponent 
+  },
 //   {
 //     path:'footer',component:FooterComponent
 //   },

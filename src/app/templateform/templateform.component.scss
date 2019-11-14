@@ -1,0 +1,19 @@
+.Allsides
+{
+    width:350px;height:200px;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+//     col-md-6,
+//      text-left shadow-lg p-3 mb-5 bg-white rounded py-3
+// }}
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched{
+border:1px solid red;
+box-shadow: 0 0 13px inset rgba(255,0,0,0.09);
+}
