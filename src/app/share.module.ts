@@ -1,7 +1,7 @@
 
 import { FilterPipe } from './appPipes/filter.pipe';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
 ],
 
-  exports: [ FilterPipe, FormsModule],
+  exports: [ FilterPipe, FormsModule,ReactiveFormsModule],
   providers: [],
   bootstrap: []
 })

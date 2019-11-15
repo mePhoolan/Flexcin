@@ -22,6 +22,7 @@ import { TestDirectiveDirective } from './appDirectives/test-directive.directive
 import { UxPipe } from './appPipes/ux.pipe';
 // import { FilterPipe } from './appPipes/filter.pipe';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 // import { HeaderComponent } from './parent/header/header.component';
 //  import { FooterComponent } from './parent/footer/footer.component';
@@ -46,6 +47,7 @@ import { TemplateformComponent } from './templateform/templateform.component';
     TestDirectiveDirective,
     UxPipe,
     TemplateformComponent,
+    ReactiveformComponent,
     // FilterPipe,
     // HeaderComponent,
     // FooterComponent

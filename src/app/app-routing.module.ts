@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComponentcommunicationComponent } from './componentcommunication/componentcommunication.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 const routes: Routes = [
 {
   path:'' ,redirectTo:"banner",pathMatch:"full"
@@ -35,6 +36,11 @@ const routes: Routes = [
 
   {
     path:'contact',component:TemplateformComponent 
+  },
+
+
+  {
+    path:'findus',component:ReactiveformComponent
   },
 //   {
 //     path:'footer',component:FooterComponent
